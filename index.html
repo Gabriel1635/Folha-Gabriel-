@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Folha de Ponto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Simulador de Folha de Ponto</h1>
+    <div class="ponto-container">
+        <label for="entrada">Hora de Entrada:</label>
+        <input type="time" id="entrada">
+
+        <label for="saida-almoco">Hora de Saída para Almoço:</label>
+        <input type="time" id="saida-almoco">
+
+        <label for="retorno-almoco">Hora de Retorno do Almoço:</label>
+        <input type="time" id="retorno-almoco">
+
+        <label for="saida">Hora de Saída:</label>
+        <input type="time" id="saida">
+
+        <button onclick="calcularHoras(); salvarHoras();">Calcular e Salvar</button>
+
+        <div class="resultado" id="resultado"></div>
+        
+        <button onclick="gerarPDF()">Baixar Relatório em PDF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
